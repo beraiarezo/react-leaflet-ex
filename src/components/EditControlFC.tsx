@@ -12,9 +12,7 @@ interface EditControlProps {
 
 function EditControlFC({ geojson, setGeojson, handleSave }: EditControlProps) {
   const ref = useRef<L.FeatureGroup>(null);
-  console.log("EditControlFC");
   useEffect(() => {
-    console.log(geojson, "json");
     if (ref.current?.getLayers().length === 0 && geojson) {
       L.geoJSON(geojson).eachLayer((layer) => {
         if (
@@ -37,7 +35,6 @@ function EditControlFC({ geojson, setGeojson, handleSave }: EditControlProps) {
   const handleChange = () => {
     const geo = ref.current?.toGeoJSON();
     if (geo?.type === "FeatureCollection") {
-      console.log(geo, "geo");
       setGeojson(geo);
     }
   };

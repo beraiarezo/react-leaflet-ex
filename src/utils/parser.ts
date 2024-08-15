@@ -5,7 +5,8 @@ import { Feature, GeoJsonProperties } from "geojson";
 
 const projUTM = "EPSG:32701";
 const projWGS84 = "EPSG:4326";
-
+console.log(proj4);
+console.log(proj4.defs);
 proj4.defs(projUTM, "+proj=utm +zone=1 +south +datum=WGS84 +units=m +no_defs");
 
 export const parsePointCoordinates = (coords: number[]): Position => {
