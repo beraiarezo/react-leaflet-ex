@@ -1,0 +1,71 @@
+#map-wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+.leaflet-container {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+}
+.sr-only {
+  display: none;
+}
+
+.processing {
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ z-index: 99999;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: rgba(0, 0, 0, .5);
+ font-size: 40px;
+ font-weight: bold;
+ color: white;
+}
+
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	display: grid;
+	color: #fff;
+	background: 
+	  conic-gradient(from 90deg at 3px 3px,#0000 90deg,currentColor 0)
+	  -3px -3px/calc(50% + 1.5px) calc(50% + 1.5px);
+	animation: l28 2s infinite;
+  }
+  .loader::before,
+  .loader::after {
+	content: "";
+	grid-area: 1/1;
+	background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+	-webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+	border-radius: 50%;
+  }
+  .loader::after {
+	margin: 20%;
+  }
+  @keyframes l28 {
+	100% {transform: rotate(1turn)}
+  }
+
+  .save {
+	z-index: 9999;
+    position: absolute;
+    right: 10px;
+	padding: 7px 7px 7px 28px;
+    top: 160px;
+    color: green;
+    background-color: white;
+    border-radius: 8px;
+	background-image: url("./assets/icons/save.svg");
+	background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 10px center;
+    text-transform: uppercase;
+    font-weight: bold;
+	cursor: pointer;
+  }
