@@ -14,4 +14,4 @@ Ensure you have Bun installed on your system. Bun is a JavaScript runtime simila
 
 `bun run dev`
 
-if you want use yarn or npm please remove bun.lockb and run `yarn install` `yarn dev` or `npm install` `npm run dev`
+if you want use npm run `npm install` `npm run dev`
