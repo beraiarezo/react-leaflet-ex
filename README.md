@@ -2,16 +2,18 @@
 
 ## To get started with this project, follow these steps:
 
-### Install Bun
-
-Ensure you have Bun installed on your system. Bun is a JavaScript runtime similar to Node.js.
-
 ### Install Dependencies: Navigate to the project root directory and run:
 
-`bun install`
+`npm install`
 
 ### Start the Server: To start the development server, execute:
 
-`bun run dev`
+`npm run dev`
 
-if you want use npm run `npm install` `npm run dev`
+### To build prject:
+
+`npm run build`
+
+### To preview prject:
+
+`npm run preview`

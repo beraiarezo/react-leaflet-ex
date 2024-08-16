@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Map from "@/components/Map";
 import "@/index.css";
@@ -7,11 +6,9 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import { AppProvider } from "@/store/context";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <AppProvider>
-      <div id="map-wrapper">
-        <Map />
-      </div>
-    </AppProvider>
-  </StrictMode>
+  <AppProvider>
+    <div id="map-wrapper">
+      <Map />
+    </div>
+  </AppProvider>
 );
